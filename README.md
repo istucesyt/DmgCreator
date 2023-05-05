@@ -7,7 +7,7 @@ DmgCreator est un freeware vous permettant de créer une image disque (.dmg) en 
 
 ## 🚀 Prérequis
 L'application nécessite un Mac sous macOS X 10.9 ou ultérieur. Celle-ci est compatible avec Apple Silicon.
-Vous aurez besoin de 20 Mo d'espace disque libre sur votre Mac.
+Vous aurez besoin de 50 Mo d'espace disque libre sur votre Mac.
 
 ## 📖 Mode d'emploi
 À l'ouverture de l'application, choisissez `Je crée mon image disque 🚀`, puis sélectionnez l'une des deux options se présentant à vous : choisissez ou non de chiffrer votre image .dmg (protection par mot de passe).
