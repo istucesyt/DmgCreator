@@ -1,8 +1,6 @@
 # DmgCreator
 
 <img width="150" alt="Icône" src="https://user-images.githubusercontent.com/108399865/236302590-2cc77afc-a58e-4e23-a991-e766cec7bcc8.png">
-
-
 Créez des images disques en quelques clics avec DmgCreator. C'est aussi simple que cela.
 
 ## ☕️ À propos
@@ -13,7 +11,6 @@ L'application nécessite un Mac sous macOS X 10.9 ou ultérieur. Celle-ci est co
 Vous aurez besoin de 50 Mo d'espace disque libre sur votre Mac.
 
 ## 📖 Mode d'emploi
-<img width="416" alt="Fenêtre de bienvenue" src="https://user-images.githubusercontent.com/108399865/236506624-54eb704e-0a30-4ab4-882b-b0f599f831eb.png">
 À l'ouverture de l'application, choisissez `Je crée mon image disque 🚀`, puis sélectionnez l'une des deux options se présentant à vous : choisissez ou non de chiffrer votre image .dmg (protection par mot de passe).
 Ensuite, donnez un nom à votre volume virtuel, continuez, et donnez un nom à votre image disque.
 Importez vos fichiers en cliquant sur `Sélectionner les fichiers`. 💡 Astuce : vous pouvez importer des dossiers afin d’obtenir un volume organisé 😉 ! La hiérarchie des fichiers ne sera pas modifiée lors de l’importation. Les fichiers ne peuvent pas être ajustés dans le volume de l’image disque.
