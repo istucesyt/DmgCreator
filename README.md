@@ -15,7 +15,7 @@ Vous aurez besoin de 50 Mo d'espace disque libre sur votre Mac.
 Ensuite, donnez un nom à votre volume virtuel, continuez, et donnez un nom à votre image disque.
 Importez vos fichiers en cliquant sur `Sélectionner les fichiers`. 💡 Astuce : vous pouvez importer des dossiers afin d’obtenir un volume organisé 😉 ! La hiérarchie des fichiers ne sera pas modifiée lors de l’importation. Les fichiers ne peuvent pas être ajustés dans le volume de l’image disque.
 
-**Patientez durant la création de votre image disque. L'opération peut durer plusieurs minutes ou plusieurs heures en fonction de la puissance de votre disque interne. Vous recevrez une notification lorsque le fichier sera créé. L'image disque finalisée apparaîtra sur le Bureau.**
+**Patientez durant la création de votre image disque. L'opération peut durer plusieurs minutes ou plusieurs heures en fonction de la puissance de votre disque interne. Un pop-up apparaîtra lorsque le fichier sera créé. L'image disque finalisée apparaîtra sur le Bureau.**
 
 ## ✉️ Restez informé...
 ...en rejoignant le serveur Discord d'iStuces : https://tinyurl.com/iStuces-Discord
