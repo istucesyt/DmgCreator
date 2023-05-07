@@ -1,6 +1,6 @@
 # DmgCreator
 
-<img width="150" alt="Icône" src="https://user-images.githubusercontent.com/108399865/236302590-2cc77afc-a58e-4e23-a991-e766cec7bcc8.png">
+<img width="150" alt="DmgCreator_Logo" src="https://user-images.githubusercontent.com/108399865/236689341-c70da0e4-c99c-47f9-980d-8a070fbaf443.png">
 Créez des images disques en quelques clics avec DmgCreator. C'est aussi simple que cela.
 
 ## ☕️ À propos
