@@ -20,9 +20,9 @@ Importez vos fichiers en cliquant sur `Sélectionner les fichiers`. 💡 Astuce 
 **Patientez durant la création de votre image disque. L'opération peut durer plusieurs minutes ou plusieurs heures en fonction de la puissance de votre disque interne. Un pop-up apparaîtra lorsque le fichier sera créé. L'image disque finalisée apparaîtra sur le Bureau.**
 
 ## ⛔️ En cas de problème...
-Accédez au dossier *Applications*. Sélectionnez *DmgCreator*, puis effectuez un clic-droit sur l'icône et choisissez *Afficher le contenu du paquet* > *Contents* > ouvrez le fichier *Info.plist*. Remplacez le code `<key>CFBundleShortVersionString</key>
- <string>0.X.X</string>` par `<key>CFBundleShortVersionString</key>
- <string>1.3</string>`.
+Accédez au dossier *Applications*. Sélectionnez *DmgCreator*, puis effectuez un clic-droit sur l'icône et choisissez *Afficher le contenu du paquet* > *Contents* > ouvrez le fichier *Info.plist*. Remplacez le code `<key>CFBundleShortVersionString</key> / <string>0.X.X</string>` par `<key>CFBundleShortVersionString</key> /
+<string>1.3</string>`.
+> Le caractère */* correspond à un passage à la ligne inférieure.
 
 ## ✉️ Restez informé...
 ...en rejoignant le serveur Discord d'iStuces : https://tinyurl.com/iStuces-Discord
