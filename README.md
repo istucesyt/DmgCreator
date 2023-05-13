@@ -1,23 +1,23 @@
 # DmgCreator
 
 <img width="150" alt="DmgCreator_Logo" src="https://user-images.githubusercontent.com/108399865/236689341-c70da0e4-c99c-47f9-980d-8a070fbaf443.png">
-Créez des images disques en quelques clics avec DmgCreator. C'est aussi simple que cela.
+Create image disks (.dmg) with DmgCreator. It's as simple as that!
 
-**Le répertoire est en cours de mise à jour. Veuillez m'excuser pour la gêne occasionnée...**
+**The repo is going through some new changes. Sorry for the inconvenience...**
 
-## ☕️ À propos
-DmgCreator est un freeware vous permettant de créer une image disque (.dmg) en quelques clics. Aucune connaissance requise, votre Mac effectue tout le processus de création à votre place.
+## ☕️ About DmgCreator
+DmgCreator is a free app for Mac that allows you to to create disk images (.dmg) in just a few clicks. No knowledge of how to code is required, as your Mac does it for you.
 
-## 🚀 Prérequis
-L'application nécessite un Mac sous macOS X 10.6 ou ultérieur. Celle-ci est compatible avec Apple Silicon.
-Vous aurez besoin de 3 Mo d'espace disque libre sur votre Mac.
+## 🚀 Requirements
+This application requires macOS X 10.6 or later. It's also compatible with Apple Silicon.
+You'll also need at least 3MB of free disk space on your Mac.
 
-👉 Le paquet étant signé localement, l'ouverture de l'application sera bloquée sur certains Mac, dont les Mac à puce Apple Silicon. Suivez la manipulation conseillée par Apple pour lancer le logiciel : https://support.apple.com/fr-fr/guide/mac-help/mh40616/13.0/mac/13.0
+👉 As this app is locally signed, opening it will be blocked on some Macs, including Macs with Apple Silicon processors. Follow this guide recommended by Apple to launch the software: https://support.apple.com/en-us/guide/mac-help/mh40616/13.0/mac/13.0
 
-## 📖 Mode d'emploi
-**Le mode d'emploi est en cours de mise à jour. Veuillez m'excuser pour la gêne occasionnée...**
+## 📖 How to use DmgCreator
+**The instructions are being worked on. I apologize for any inconvenience...**
 
-## ✉️ Restez informé...
-...en rejoignant le serveur Discord d'iStuces : https://tinyurl.com/iStuces-Discord
+## ✉️ Staying updated with DmgCreator...
+You can join @istuces23's Discord : https://tinyurl.com/iStuces-Discord
 
-...en vous abonnant à la chaine YouTube @istuces23 : https://youtube.com/@istuces23
+...or, subscribe to @istuces23's YouTube channel! : https://youtube.com/@istuces23
