@@ -10,11 +10,11 @@ repeat
 	end if
 	
 	if choice is "Plus d'options, à propos..." then
-		display dialog "Plus d'options :" with title "DmgCreator" buttons {"Retour", "Modification d'icône / verrouillage", "À propos de DmgCreator"} default button 2 with icon note
+		display dialog "Accédez à plus d'options :" with title "DmgCreator" buttons {"Retour", "💡 Tutoriels : modification d'icône / verrouillage", "À propos de DmgCreator"} default button 2 with icon note
 		set choice to button returned of result
 		
 		if choice is "À propos de DmgCreator" then
-			display dialog "Version 1.0 build 4
+			display dialog "Version 1.0 build 6
 2023, iStuces
 
 Co-créé par l'intelligence artificielle. 🧠
@@ -33,8 +33,8 @@ Pour bénéficier de toutes les informations sur ce logiciel, et de plus de cont
 		
 	end if
 	
-	if choice is "Modification d'icône / verrouillage" then
-		display dialog "Vous souhaitez..." with title "Modification d'icône / verrouillage" buttons {"...modifier l'icône d'une image disque ou d'un volume", "...verrouiller une image disque", "Fermer"}
+	if choice is "💡 Tutoriels : modification d'icône / verrouillage" then
+		display dialog "Vous souhaitez..." with title "💡 Tutoriels : modification d'icône / verrouillage" buttons {"...modifier l'icône d'une image disque ou d'un volume", "...verrouiller une image disque", "Fermer"} default button 3
 		set choice to button returned of result
 	end if
 	
@@ -63,109 +63,38 @@ Afin de monter le volume associé, double-cliquez sur celle-ci.
 	
 Vous pouvez renommer manuellement l'image disque ou le volume, et écrire sur le volume.
 	
-Accédez à plus d'options (modification de l'icône du volume / de l'image disque et verrouillage de celle-ci) à partir du menu principal (section Plus d'options) ou des boutons ci-dessous :" buttons {"Modifier l'icône d'une image disque ou d'un volume", "Verrouiller une image disque", "Suivant"} with icon note with title "Opération terminée" default button 1
+Accédez à plusieurs tutoriels (modification de l'icône du volume / de l'image disque et verrouillage de celle-ci) à partir du menu principal (section Plus d'options) ou des boutons ci-dessous :" buttons {"Modifier l'icône d'une image disque ou d'un volume", "Verrouiller une image disque", "Suivant"} with icon note with title "Opération terminée" default button 1
 		set choice to button returned of result
 		
 	end if
 	
 	if choice is "...modifier l'icône d'une image disque ou d'un volume" then
-		display dialog "Vous devez posséder le droit d'écriture sur l'image ou le volume dont vous souhaitez modifier l'icône. Cette fonctionnalité utilise un build du script open-source IconChanger." with icon caution with title "Modification d'icône" buttons {"Annuler", "Lancer IconChanger"} default button 2
+		display dialog "Afin de modifier l'icône d'une image disque ou d'un volume, téléchargez le script IconChanger en utilisant le bouton ci-dessous.
 		
-		repeat
-			set nameList to {"...d'une image disque", "...d'un volume d'image disque"}
-			set choice to (choose from list the nameList with prompt "Modifier l'icône..." with title "IconChanger") as string
-			if choice is "false" then exit repeat
-			
-			if choice is "...d'une image disque" then
-				set access to choose file with prompt "Sélectionnez l'image disque dont vous souhaitez modifier l'icône"
-			end if
-			if choice is "...d'un volume d'image disque" then
-				set access to choose folder with prompt "Sélectionnez le volume dont vous souhaitez modifier l'icône"
-			end if
-			
-			set accessi to choose file with prompt "Sélectionnez l'icône de remplacement"
-			
-			tell application "Finder"
-				set touch to "c"
-				activate
-				open information window of accessi
-				activate
-			end tell
-			
-			
-			tell application "System Events" to tell process "Finder" to tell window 1
-				keystroke tab
-				delay 0.5
-				keystroke (touch & "w") using command down
-				delay 0.5
-			end tell
-			
-			tell application "Finder"
-				set touch to "v"
-				activate
-				open information window of access
-				activate
-			end tell
-			
-			tell application "System Events" to tell process "Finder" to tell window 1
-				keystroke tab
-				keystroke (touch & "w") using command down
-			end tell
-			exit repeat
-			
-		end repeat
+Exécutez dans le Terminal la commande suivante :
 		
-		display dialog "L'opération est terminée." with icon note with title "Modification d'icône" buttons {"Fermer"} default button 1
+osascript [IconChanger.script]
+
+> Ici, le fichier IconChanger.script téléchargé devra être déposé dans la fenêtre de Terminal à la place de [IconChanger.script]." with icon caution with title "Modification d'icône" buttons {"Fermer", "Télécharger IconChanger"} default button 2
+		set choice to button returned of result
 	end if
 	
 	if choice is "Modifier l'icône d'une image disque ou d'un volume" then
-		display dialog "Vous devez posséder le droit d'écriture sur l'image ou le volume dont vous souhaitez modifier l'icône. Cette fonctionnalité utilise un build du script open-source IconChanger." with icon caution with title "Modification d'icône" buttons {"Annuler", "Lancer IconChanger"} default button 2
+		display dialog "Afin de modifier l'icône d'une image disque ou d'un volume, téléchargez le script IconChanger en utilisant le bouton ci-dessous.
 		
-		repeat
-			set nameList to {"...d'une image disque", "...d'un volume d'image disque"}
-			set choice to (choose from list the nameList with prompt "Modifier l'icône..." with title "IconChanger") as string
-			if choice is "false" then exit repeat
-			
-			if choice is "...d'une image disque" then
-				set access to choose file with prompt "Sélectionnez l'image disque dont vous souhaitez modifier l'icône"
-			end if
-			if choice is "...d'un volume d'image disque" then
-				set access to choose folder with prompt "Sélectionnez le volume dont vous souhaitez modifier l'icône"
-			end if
-			
-			set accessi to choose file with prompt "Sélectionnez l'icône de remplacement"
-			
-			tell application "Finder"
-				set touch to "c"
-				activate
-				open information window of accessi
-				activate
-			end tell
-			
-			
-			tell application "System Events" to tell process "Finder" to tell window 1
-				keystroke tab
-				delay 0.5
-				keystroke (touch & "w") using command down
-				delay 0.5
-			end tell
-			
-			tell application "Finder"
-				set touch to "v"
-				activate
-				open information window of access
-				activate
-			end tell
-			
-			tell application "System Events" to tell process "Finder" to tell window 1
-				keystroke tab
-				keystroke (touch & "w") using command down
-			end tell
-			exit repeat
-			
-		end repeat
+Exécutez dans le Terminal la commande suivante :
 		
-		display dialog "L'opération est terminée." with icon note with title "Modification d'icône" buttons {"Fermer"} default button 1
+osascript [IconChanger.script]
+
+> Ici, le fichier IconChanger.script téléchargé devra être déposé dans la fenêtre de Terminal à la place de [IconChanger.script]." with icon caution with title "Modification d'icône" buttons {"Fermer", "Télécharger IconChanger"} default button 2
+		set choice to button returned of result
+	end if
+	
+	if choice is "Télécharger IconChanger" then
+		tell application "Safari"
+			activate
+			open location "https://github.com/istucesyt/IconChanger"
+		end tell
 	end if
 	
 	if choice is "...verrouiller une image disque" then
