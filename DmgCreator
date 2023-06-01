@@ -1,6 +1,6 @@
 repeat
 	
-	display dialog "DmgCreator est un logiciel gratuit. Pour plus d’informations sur celui-ci et sur son fonctionnement, consultez le répertoire GitHub du projet." with title "DmgCreator" with icon note buttons {"Quitter", "Je crée mon image disque 🚀", "Plus d'options, à propos..."} default button 2
+	display dialog "DmgCreator est un logiciel gratuit. Pour plus d’informations sur celui-ci et sur son fonctionnement, consultez le répertoire GitHub du projet." with title "DmgCreator" buttons {"Quitter", "Je crée mon image disque 🚀", "Plus d'options, à propos..."} default button 2
 	set choice to button returned of result
 	
 	if choice is "Quitter" then
@@ -10,16 +10,16 @@ repeat
 	end if
 	
 	if choice is "Plus d'options, à propos..." then
-		display dialog "Accédez à plus d'options :" with title "DmgCreator" buttons {"Retour", "💡 Tutoriels : modification d'icône / verrouillage", "À propos de DmgCreator"} default button 2 with icon note
+		display dialog "Accédez à plus d'options :" with title "DmgCreator" buttons {"Retour", "💡 Tutoriels : modification d'icône / verrouillage", "À propos de DmgCreator"} default button 2
 		set choice to button returned of result
 		
 		if choice is "À propos de DmgCreator" then
-			display dialog "Version 1.0 build 6
+			display dialog "Version 1.0 build 7
 2023, iStuces
 
 Co-créé par l'intelligence artificielle. 🧠
 Pour toute suggestion ou tout signalement, merci de contacter istucesyt@gmail.com
-Pour bénéficier de toutes les informations sur ce logiciel, et de plus de contenus, rejoignez le serveur Discord d'iStuces :" with title "À propos de DmgCreator" buttons {"Rejoindre le serveur Discord", "Fermer"} with icon note default button 2
+Pour bénéficier de toutes les informations sur ce logiciel, et de plus de contenus, rejoignez le serveur Discord d'iStuces :" with title "À propos de DmgCreator" buttons {"Rejoindre le serveur Discord", "Fermer"} default button 2 with icon note
 			
 			set choice to button returned of result
 			if choice is "Rejoindre le serveur Discord" then
@@ -48,7 +48,7 @@ Pour bénéficier de toutes les informations sur ce logiciel, et de plus de cont
 		
 		set imageFolderPath to (choose folder with prompt "Sélectionnez l'emplacement d'enregistrement de l'image disque.")
 		
-		display dialog "Afin d'éviter toute erreur, veuillez vérifier qu'aucune image disque du même nom soit présente dans le dossier de destination." buttons {"Continuer"} with icon note with title "Création de l'image disque" default button 1
+		display dialog "Afin d'éviter toute erreur, veuillez vérifier qu'aucune image disque du même nom soit présente dans le dossier de destination." buttons {"Continuer"} with title "Création de l'image disque" default button 1
 		
 		display dialog "La création de l'image disque va débuter. L'opération ne devrait prendre que quelques secondes.
 Ce message se fermera automatiquement dans 5 secondes." buttons {"OK"} with icon caution with title "Lancement de l'opération" default button 1 giving up after 5
@@ -63,7 +63,7 @@ Afin de monter le volume associé, double-cliquez sur celle-ci.
 	
 Vous pouvez renommer manuellement l'image disque ou le volume, et écrire sur le volume.
 	
-Accédez à plusieurs tutoriels (modification de l'icône du volume / de l'image disque et verrouillage de celle-ci) à partir du menu principal (section Plus d'options) ou des boutons ci-dessous :" buttons {"Modifier l'icône d'une image disque ou d'un volume", "Verrouiller une image disque", "Suivant"} with icon note with title "Opération terminée" default button 1
+Accédez à plusieurs tutoriels (modification de l'icône du volume / de l'image disque et verrouillage de celle-ci) à partir du menu principal (section Plus d'options) ou des boutons ci-dessous :" buttons {"Modifier l'icône d'une image disque ou d'un volume", "Verrouiller une image disque", "Suivant"} with title "Opération terminée" default button 1
 		set choice to button returned of result
 		
 	end if
@@ -110,7 +110,7 @@ osascript [IconChanger.script]
 	end if
 	
 	if choice is "Verrouiller une image disque" then
-		display dialog "Malheureusement, DmgCreator ne peut pas verrouiller un volume d'image disque... Vous pouvez cepandant le faire manuellement en suivant les indications de l'aide en ligne :" with icon note with title "Verrouillage d'une image disque" buttons {"Accéder à l'aide", "Fermer"} default button 1
+		display dialog "Malheureusement, DmgCreator ne peut pas verrouiller un volume d'image disque... Vous pouvez cepandant le faire manuellement en suivant les indications de l'aide en ligne :" with title "Verrouillage d'une image disque" buttons {"Accéder à l'aide", "Fermer"} default button 1
 		set choice to button returned of result
 		
 		if choice is "Accéder à l'aide" then
