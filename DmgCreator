@@ -14,7 +14,7 @@ repeat
 		set choice to button returned of result
 		
 		if choice is "À propos de DmgCreator" then
-			display dialog "Version 1.0 build 8
+			display dialog "Version 1.0 build 8b
 2023, iStuces
 
 Pour toute suggestion ou tout signalement, merci de contacter istucesyt@gmail.com
@@ -38,6 +38,8 @@ Pour bénéficier de toutes les informations sur ce logiciel, et de plus de cont
 	end if
 	
 	if choice is "Créer une image disque" then
+		
+		set creationState to "S"
 		
 		display dialog "Entrez la taille de l'image disque (par exemple, 1g pour 1 Go, 1m pour 1 Mo, 1k pour 1 Ko...)" default answer "1g" buttons {"Suivant"} default button 1 with title "Création de l'image disque"
 		set volumeSize to the text returned of the result
@@ -65,8 +67,11 @@ Ce message se fermera automatiquement dans 5 secondes." buttons {"OK"} with icon
 			set creationState to "E"
 			display dialog msg & "
 			
-Issue : erreur -5344
-Cette erreur peut être causée par l'entrée d'une valeur de taille trop faible ou incorrecte. Exemples : taille inférieure à 1 Mo (1m), valeur 1K incorrecte (correction : 1k)..." with title "Erreur" with icon stop buttons {"Abandonner"} default button 1
+Issue : > erreur -5344
+Cette erreur peut être causée par l'entrée d'une valeur de taille trop faible ou incorrecte. Exemples : taille inférieure à 1 Mo (1m), valeur 1ko incorrecte (correction : 1k)...
+
+Issue : > Le fichier existe
+Une image disque du même nom existe déjà dans le dossier de destination choisi. Remplacez celui-ci ou modifiez le titre de l'image." with title "Erreur" with icon stop buttons {"Abandonner"} default button 1
 			
 		end try
 		
@@ -114,7 +119,7 @@ osascript [IconChanger.script]
 	end if
 	
 	if choice is "...verrouiller une image disque" then
-		display dialog "Malheureusement, DmgCreator ne peut pas verrouiller un volume d'image disque... Vous pouvez cepandant le faire manuellement en suivant les indications de l'aide en ligne :" with icon note with title "Verrouillage d'une image disque" buttons {"Accéder à l'aide", "Fermer"} default button 1
+		display dialog "Malheureusement, DmgCreator ne peut pas verrouiller un volume d'image disque... Vous pouvez cependant le faire manuellement en suivant les indications de l'aide en ligne :" with icon note with title "Verrouillage d'une image disque" buttons {"Accéder à l'aide", "Fermer"} default button 1
 		set choice to button returned of result
 		
 		if choice is "Accéder à l'aide" then
@@ -126,7 +131,7 @@ osascript [IconChanger.script]
 	end if
 	
 	if choice is "Verrouiller une image disque" then
-		display dialog "Malheureusement, DmgCreator ne peut pas verrouiller un volume d'image disque... Vous pouvez cepandant le faire manuellement en suivant les indications de l'aide en ligne :" with title "Verrouillage d'une image disque" buttons {"Accéder à l'aide", "Fermer"} default button 1
+		display dialog "Malheureusement, DmgCreator ne peut pas verrouiller un volume d'image disque... Vous pouvez cependant le faire manuellement en suivant les indications de l'aide en ligne :" with title "Verrouillage d'une image disque" buttons {"Accéder à l'aide", "Fermer"} default button 1
 		set choice to button returned of result
 		
 		if choice is "Accéder à l'aide" then
