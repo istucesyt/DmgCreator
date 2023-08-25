@@ -1,6 +1,6 @@
 repeat
 	
-	display dialog "DmgCreator est un logiciel gratuit. Pour plus d’informations sur celui-ci et sur son fonctionnement, consultez le répertoire GitHub du projet." with title "DmgCreator" buttons {"Quitter", "Je crée mon image disque 🚀", "Plus d'options, à propos..."} default button 2
+	display dialog "DmgCreator est un logiciel gratuit. Pour plus d’informations sur celui-ci et sur son fonctionnement, consultez le répertoire GitHub du projet." with title "DmgCreator" buttons {"Quitter", "Créer une image disque", "Plus d'options, à propos..."} default button 2
 	set choice to button returned of result
 	
 	if choice is "Quitter" then
@@ -10,14 +10,13 @@ repeat
 	end if
 	
 	if choice is "Plus d'options, à propos..." then
-		display dialog "Accédez à plus d'options :" with title "DmgCreator" buttons {"Retour", "💡 Tutoriels : modification d'icône / verrouillage", "À propos de DmgCreator"} default button 2
+		display dialog "Accédez à plus d'options :" with title "DmgCreator" buttons {"Retour", "Tutoriels : modification d'icône / verrouillage", "À propos de DmgCreator"} default button 2
 		set choice to button returned of result
 		
 		if choice is "À propos de DmgCreator" then
-			display dialog "Version 1.0 build 7
+			display dialog "Version 1.0 build 8
 2023, iStuces
 
-Co-créé par l'intelligence artificielle. 🧠
 Pour toute suggestion ou tout signalement, merci de contacter istucesyt@gmail.com
 Pour bénéficier de toutes les informations sur ce logiciel, et de plus de contenus, rejoignez le serveur Discord d'iStuces :" with title "À propos de DmgCreator" buttons {"Rejoindre le serveur Discord", "Fermer"} default button 2 with icon note
 			
@@ -25,7 +24,7 @@ Pour bénéficier de toutes les informations sur ce logiciel, et de plus de cont
 			if choice is "Rejoindre le serveur Discord" then
 				tell application "Safari"
 					activate
-					open location "https://tinyurl.com/iStuces-Discord"
+					open location "https://tinyurl.com/iTech-Discord"
 				end tell
 			end if
 			
@@ -33,17 +32,17 @@ Pour bénéficier de toutes les informations sur ce logiciel, et de plus de cont
 		
 	end if
 	
-	if choice is "💡 Tutoriels : modification d'icône / verrouillage" then
-		display dialog "Vous souhaitez..." with title "💡 Tutoriels : modification d'icône / verrouillage" buttons {"...modifier l'icône d'une image disque ou d'un volume", "...verrouiller une image disque", "Fermer"} default button 3
+	if choice is "Tutoriels : modification d'icône / verrouillage" then
+		display dialog "Vous souhaitez..." with title "Tutoriels : modification d'icône / verrouillage" buttons {"...modifier l'icône d'une image disque ou d'un volume", "...verrouiller une image disque", "Fermer"} default button 3
 		set choice to button returned of result
 	end if
 	
-	if choice is "Je crée mon image disque 🚀" then
+	if choice is "Créer une image disque" then
 		
-		display dialog "Entrez la taille de l'image disque (par exemple, 1g pour 1 Go, 1m pour 1 Mo, 1k pour 1 Ko...)" default answer "1g" buttons {"Annuler", "Suivant"} default button 2 with title "Création de l'image disque"
+		display dialog "Entrez la taille de l'image disque (par exemple, 1g pour 1 Go, 1m pour 1 Mo, 1k pour 1 Ko...)" default answer "1g" buttons {"Suivant"} default button 1 with title "Création de l'image disque"
 		set volumeSize to the text returned of the result
 		
-		display dialog "Entrez le nom de l'image disque" default answer "Ma super image 🚀" buttons {"Annuler", "Suivant"} default button 2 with title "Création de l'image disque"
+		display dialog "Entrez le nom de l'image disque" default answer "Ma super image 🚀" buttons {"Suivant"} default button 1 with title "Création de l'image disque"
 		set volumeName to the text returned of the result
 		
 		set imageFolderPath to (choose folder with prompt "Sélectionnez l'emplacement d'enregistrement de l'image disque.")
@@ -56,15 +55,32 @@ Ce message se fermera automatiquement dans 5 secondes." buttons {"OK"} with icon
 		set imageFilePath to POSIX path of imageFolderPath & volumeName
 		
 		set createCmd to "hdiutil create -size " & volumeSize & " -fs HFS+ -volname " & quoted form of volumeName & " " & quoted form of imageFilePath
-		do shell script createCmd
 		
-		display dialog "La création de l'image disque est terminée !
+		try
+			
+			do shell script createCmd
+			
+		on error msg number n from f to t partial result p
+			
+			set creationState to "E"
+			display dialog msg & "
+			
+Issue : erreur -5344
+Cette erreur peut être causée par l'entrée d'une valeur de taille trop faible ou incorrecte. Exemples : taille inférieure à 1 Mo (1m), valeur 1K incorrecte (correction : 1k)..." with title "Erreur" with icon stop buttons {"Abandonner"} default button 1
+			
+		end try
+		
+		if creationState is not "E" then
+			
+			display dialog "La création de l'image disque est terminée !
 Afin de monter le volume associé, double-cliquez sur celle-ci.
 	
 Vous pouvez renommer manuellement l'image disque ou le volume, et écrire sur le volume.
 	
 Accédez à plusieurs tutoriels (modification de l'icône du volume / de l'image disque et verrouillage de celle-ci) à partir du menu principal (section Plus d'options) ou des boutons ci-dessous :" buttons {"Modifier l'icône d'une image disque ou d'un volume", "Verrouiller une image disque", "Suivant"} with title "Opération terminée" default button 1
-		set choice to button returned of result
+			set choice to button returned of result
+			
+		end if
 		
 	end if
 	
