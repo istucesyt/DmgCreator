@@ -1,4 +1,4 @@
-# DmgCreator
+# DmgCreator S
 Create disk images in a few clicks with DmgCreator. It's as simple as that.
 
 ## ☕️ About
