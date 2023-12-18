@@ -11,6 +11,6 @@ Nécessite un Mac sous macOS 11.0 (Big Sur) ou ultérieur. Compatible avec Apple
 Vous aurez besoin de 20 Mo d'espace disque libre sur votre Mac.
 
 ## ✉️ Restez informé...
-...en rejoignant le serveur Discord d'iStuces : https://tinyurl.com/iStuces-Discord
+...en rejoignant mon serveur Discord : https://tinyurl.com/iStuces-Discord
 
-...en vous abonnant à la chaine YouTube @istuces23 : https://youtube.com/@istuces23
+...en vous abonnant à ma chaine YouTube @istuces23 : https://youtube.com/@istuces23
